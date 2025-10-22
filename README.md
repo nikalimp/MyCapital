@@ -12,7 +12,21 @@ Cross-platform mobile app prototype for tracking personal assets. Built with Exp
    ```bash
    npm start
    ```
-   Use the prompts to open the app on iOS, Android, or the web.
+Use the prompts to open the app on iOS, Android, or the web.
+
+## Deploying to Vercel
+
+The project can be exported as a static website that Vercel can host directly.
+
+1. Build the static bundle:
+   ```bash
+   npm run build
+   ```
+2. Deploy the generated `dist/` directory with Vercel (for example via [Vercel CLI](https://vercel.com/docs/cli)): 
+   ```bash
+   vercel deploy --prebuilt
+   ```
+   Vercel will serve `index.html` for every route, ensuring the single-page application works with client-side routing.
 
 ## Features
 
