@@ -22,7 +22,8 @@ The project can be exported as a static website that Vercel can host directly.
    ```bash
    npm run build
    ```
-2. Deploy the generated `dist/` directory with Vercel (for example via [Vercel CLI](https://vercel.com/docs/cli)): 
+   When the command runs in CI (for example on Vercel) it expects Expo credentials. Create an Expo access token (`npx expo login` → `npx expo token:create`) and add it to the Vercel project as the environment variable `EXPO_TOKEN`. Alternatively provide `EXPO_CLI_USERNAME` and `EXPO_CLI_PASSWORD`.
+2. Deploy the generated `dist/` directory with Vercel (for example via [Vercel CLI](https://vercel.com/docs/cli)):
    ```bash
    vercel deploy --prebuilt
    ```
